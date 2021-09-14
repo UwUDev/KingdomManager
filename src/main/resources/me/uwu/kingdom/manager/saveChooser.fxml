@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="551.0" prefWidth="865.0" style="-fx-background-color: #16171A;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.uwu.kingdom.manager.controllers.SaveChooserMenu">
+   <children>
+      <ImageView fx:id="save2EmptyBlason" fitHeight="245.0" fitWidth="245.0" layoutX="310.0" layoutY="146.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/emptyBlason.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="save3EmptyBlason" fitHeight="245.0" fitWidth="245.0" layoutX="606.0" layoutY="146.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/emptyBlason.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="save1EmptyBlason" fitHeight="245.0" fitWidth="245.0" layoutX="14.0" layoutY="146.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/emptyBlason.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="48.0" fitWidth="245.0" layoutX="14.0" layoutY="411.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/btn.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="48.0" fitWidth="245.0" layoutX="310.0" layoutY="411.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/btn.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="48.0" fitWidth="245.0" layoutX="606.0" layoutY="411.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/btn.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="14.0" layoutY="411.0" prefHeight="47.0" prefWidth="245.0" text="Edit save" />
+      <Label alignment="CENTER" layoutX="310.0" layoutY="411.0" prefHeight="47.0" prefWidth="245.0" text="Edit save" />
+      <Label alignment="CENTER" layoutX="606.0" layoutY="411.0" prefHeight="47.0" prefWidth="245.0" text="Edit save" />
+   </children>
+</Pane>

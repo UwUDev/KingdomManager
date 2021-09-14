@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'PXL3278';
+    src: url("fonts/PXL3278.ttf");
+}
+
+.label {
+    -fx-font-family: 'PXL3278';
+}
+
