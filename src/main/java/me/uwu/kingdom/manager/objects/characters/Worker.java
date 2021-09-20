@@ -30,7 +30,7 @@ public class Worker extends Obj {
         this.setCrpcType(1);
         this.setLocalPosition(new Position(random.nextDouble(), random.nextDouble(), random.nextDouble()));
         this.setLocalScale(new Position(-1, 1, 1));
-        this.setComponentData2(gson.fromJson("[{\"name\":\"Wallet\",\"type\":\"WalletData\",\"data\":\"{\\\"coins\\\":0,\\\"gems\\\":0}\"},{\"name\":\"Character\",\"type\":\"CharacterData\",\"data\":\"{\\\"isGrabbed\\\":false,\\\"inert\\\":false}\"},{\"name\":\"Archer\",\"type\":\"ArcherData\",\"data\":\"{\\\"tower\\\":{\\\"linkedObjectID\\\":\\\"\\\"},\\\"knight\\\":{\\\"linkedObjectID\\\":\\\"\\\"},\\\"guardSide\\\":1,\\\"guardDepth\\\":0}\"},{\"name\":\"Damageable\",\"type\":\"DamageableData\",\"data\":\"{\\\"hitPoints\\\":0,\\\"invulnerable\\\":false}\"}]", ComponentData[].class));
+        this.setComponentData2(gson.fromJson("[{\"name\":\"Wallet\",\"type\":\"WalletData\",\"data\":\"{\\\"coins\\\":0,\\\"gems\\\":0}\"},{\"name\":\"Character\",\"type\":\"CharacterData\",\"data\":\"{\\\"isGrabbed\\\":false,\\\"inert\\\":false}\"},{\"name\":\"Damageable\",\"type\":\"DamageableData\",\"data\":\"{\\\"hitPoints\\\":0,\\\"invulnerable\\\":false}\"}]", ComponentData[].class));
     }
 
     // Position localPosition, Position localScale, ComponentData[] componentData2) {

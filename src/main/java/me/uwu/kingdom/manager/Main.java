@@ -1,15 +1,11 @@
 package me.uwu.kingdom.manager;
 
 import com.google.gson.Gson;
-import me.uwu.kingdom.manager.objects.characters.Archer;
-import me.uwu.kingdom.manager.save.IslandSave;
 import me.uwu.kingdom.manager.objects.Obj;
+import me.uwu.kingdom.manager.save.IslandSave;
 
 import java.io.*;
 import java.nio.file.Files;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 import java.util.zip.GZIPInputStream;
 import java.util.zip.GZIPOutputStream;
 
@@ -32,20 +28,23 @@ public class Main {
             }
         }
 
+        saveBackup(backup.getName(), gson.toJson(islandSave));
+        compressGzipFile(backup.getName(), "island-v35-c0-l0");
+    }
+
+    public static void saveBackup(String name, String json){
         try {
-            FileWriter myWriter = new FileWriter(backup);
-            myWriter.write(gson.toJson(islandSave));
+            FileWriter myWriter = new FileWriter(name);
+            myWriter.write(json);
             myWriter.close();
             System.out.println("Successfully wrote to the file.");
         } catch (IOException e) {
             System.out.println("An error occurred.");
             e.printStackTrace();
         }
-
-        compressGzipFile(backup.getName(), "island-v35-c0-l0");
     }
 
-    private static void decompressGzipFile(String gzipFile, String newFile) {
+    public static void decompressGzipFile(String gzipFile, String newFile) {
         try {
             FileInputStream fis = new FileInputStream(gzipFile);
             GZIPInputStream gis = new GZIPInputStream(fis);
@@ -64,7 +63,7 @@ public class Main {
 
     }
 
-    private static void compressGzipFile(String file, String gzipFile) {
+    public static void compressGzipFile(String file, String gzipFile) {
         try {
             FileInputStream fis = new FileInputStream(file);
             FileOutputStream fos = new FileOutputStream(gzipFile);
