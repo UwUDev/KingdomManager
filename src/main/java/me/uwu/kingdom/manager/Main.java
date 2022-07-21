@@ -22,8 +22,8 @@ public class Main {
         //islandSave.addWorkers(20);
 
         for (Obj object : islandSave.getObjects()) {
-            if (object.getName().startsWith("Worker")) {
-                object.getComponentData2()[0].setData("{\"coins\":1,\"gems\":1}");
+            if (object.isCharacters()) {
+                object.getData().get("componentData2").getAsJsonArray().get(0).getAsJsonObject().addProperty("data", "{\"coins\":1,\"gems\":1}");
                 System.out.println("YES");
             }
         }

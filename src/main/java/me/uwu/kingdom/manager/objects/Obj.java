@@ -1,5 +1,7 @@
 package me.uwu.kingdom.manager.objects;
 
+import com.google.gson.Gson;
+import com.google.gson.JsonObject;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -13,7 +15,10 @@ import me.uwu.kingdom.manager.objects.info.Position;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Obj {
-    private String name;
+    protected static final Gson gson = new Gson();
+    private JsonObject data;
+
+    /*private String name;
     private ParentObject parentObject;
     private String hierarchyPath;
     private String prefabPath;
@@ -28,5 +33,20 @@ public class Obj {
     private int crpcType;
     private Position localPosition;
     private Position localScale;
-    private ComponentData[] componentData2;
+    private ComponentData[] componentData2;*/
+
+    public boolean isCharacters() {
+        try {
+            if (data.get("name").getAsString().startsWith("Beggar"))
+                return false;
+            return data.get("componentData2").getAsJsonArray().get(1).getAsJsonObject().get("name").getAsString().equals("Character");
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    @Override
+    public String toString() {
+        return gson.toJson(this);
+    }
 }

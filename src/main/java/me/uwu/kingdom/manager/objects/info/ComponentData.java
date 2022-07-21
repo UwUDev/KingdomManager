@@ -8,7 +8,5 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 public class ComponentData {
-    private String name;
-    private String type;
-    private String data;
+    private String name, type, data;
 }
